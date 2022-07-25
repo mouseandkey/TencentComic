@@ -6,13 +6,14 @@ import os
 import concurrent.futures
 
 # 如果要下载付费章节，需要登录账号购买，替换上自己购买了的账号就好了
+# 如果爬取的是免费的漫画，可以不需要headers
 # 关键是cookie
 headers = {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
     "accept-encoding": "gzip, deflate, br",
     "accept-language": "zh-CN,zh;q=0.9",
     "cache-control": "max-age=0",
-    "cookie": "__AC__=1; RK=tbl0kj3Q0b; ptcz=48a6f81df66b85eaf34becdb6a61dd212611b82cabf0b58c259f43b3264795ec; theme=dark; roastState=2; readLastRecord=%5B%5D; pgv_info=ssid=s2680466930; pgv_pvid=7183122722; ts_uid=7283403260; Hm_lvt_f179d8d1a7d9619f10734edb75d482c4=1658573298; ac_wx_user=; _qpsvr_localtk=0.9321568532027515; login_type=4; open_id=B600BE3CAB7F51390F2AC510AC74504B; access_token=DAE75D26043ED61E0D787F7D60CECB85; nav_userinfo_cookie=%7B%22openid%22%3A%22B600BE3CAB7F51390F2AC510AC74504B%22%2C%22access_token%22%3A%22DAE75D26043ED61E0D787F7D60CECB85%22%2C%22faked_uin%22%3A%22332660172%22%2C%22nick%22%3A%22%E5%BE%88%E5%82%BB%E5%BE%88%E5%A4%A9%E7%9C%9F%22%2C%22avatar%22%3A%22https%3A%2F%2Fthirdqq.qlogo.cn%2Fg%3Fb%3Doidb%26k%3DRn6mODqib3LZbN0npUgZWCg%26s%3D100%26t%3D1556432370%22%2C%22hasLogin%22%3A%221%22%2C%22token%22%3A%22riq6QJrHTRlbxzktcZGbu7v0hHwMZF%2BJ7vlf68nKmw%2F4begubZljSHGMvIKdwPKxupDbeFfXQSe%2FJJiZkYsrNAF0wJbpP0aGW%2FdBZ1NuVaba%2FQA1FgU00ooCcG%2BITGTW%22%7D; readRecord=%5B%5B645332%2C%22%E6%88%91%E4%B8%BA%E9%82%AA%E5%B8%9D%22%2C3%2C%22%E7%A9%BF%E8%B6%8A%E4%BA%86%EF%BC%8C%E6%8E%89%E8%BF%9B%E5%A6%96%E5%A5%B3%E7%AA%9D%22%2C1%5D%5D; ts_last=ac.qq.com/ComicView/index/id/645332/cid/3; Hm_lpvt_f179d8d1a7d9619f10734edb75d482c4=1658683666",
+    "cookie": "",
     "referer": "https://ac.qq.com/Comic/comicInfo/id/645332?_via=pc.index.vippay6",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "Windows",
